@@ -14,3 +14,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template("index.html", name1="Quentin", name2="Simon", name3="Baptiste", url_img_AI_model="./picture/img1.png")
+
+@app.route('/wine')
+def wine():
+    return render_template("wine.html")
