@@ -1,4 +1,10 @@
 from flask import Flask, render_template
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import create_engine
+
+# DB instance
+engine = create_engine('sqlite:///database/test.sqlite')
+Base = declarative_base()
 
 # Flask instance
 app = Flask(__name__)

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Python-avancé
 
 ## Architecture du projet : 
