@@ -4,24 +4,24 @@
 ## Architecture du projet : 
 
 Projet python avancé  
- |--Website  
- |     |--picture  
- |     |     |-img1.png  
- |     |     |-img2.png ...  
- |     |--templates   
- |     |     |-index.html ...   
- |     |-app.py  
+ |__Website  
+ |     |__picture  
+ |     |     |_img1.png  
+ |     |     |_img2.png ...  
+ |     |__templates   
+ |     |     |_index.html ...   
+ |     |_app.py  
  |  
- |--App  
- |     |-script.py  
- |  
- |  
+ |__App  
+ |     |_script.py  
  |  
  |  
  |  
  |  
- |--Test  
- |     |--Website  
- |     |     |-test1.py ...  
- |     |--App  
- |           |-test1.py ...  
+ |  
+ |  
+ |__Test  
+ |     |__Website  
+ |     |     |_test1.py ...  
+ |     |__App  
+ |           |_test1.py ...  
