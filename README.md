@@ -3,25 +3,27 @@
 
 ## Architecture du projet : 
 
+```bash 
 Projet python avancé  
- |__Website  
- |     |__picture  
- |     |     |_img1.png  
- |     |     |_img2.png ...  
- |     |__templates   
- |     |     |_index.html ...   
- |     |_app.py  
+ |--Website  
+ |     |--picture  
+ |     |     |-img1.png  
+ |     |     |-img2.png ...  
+ |     |--templates   
+ |     |     |-index.html ...   
+ |     |-app.py  
  |  
- |__App  
- |     |_script.py  
- |  
- |  
+ |--App  
+ |     |-script.py  
  |  
  |  
  |  
  |  
- |__Test  
- |     |__Website  
- |     |     |_test1.py ...  
- |     |__App  
- |           |_test1.py ...  
+ |  
+ |  
+ |--Test  
+ |     |--Website  
+ |     |     |-test1.py ...  
+ |     |--App  
+ |           |-test1.py ...  
+```
