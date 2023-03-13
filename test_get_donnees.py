@@ -46,14 +46,11 @@ def test_download(test_data):
 
 def test_decompress(test_data):
     url, year, month, filename = test_data
-    download(url, year, month, filename)
     decompress(filename)
     assert os.path.exists(filename)
 
 
 def test_delete_gzip(test_data):
     url, year, month, filename = test_data
-    download(url, year, month, filename)
-    decompress(filename)
     delete_gzip(filename)
     assert not os.path.exists(filename + ".gz")
