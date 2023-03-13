@@ -3,6 +3,7 @@ import gzip
 import shutil
 from datetime import date
 
+"""Use the get_donnees.py file for this project"""
 
 # Specify the URL pattern
 url_pattern = "https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/Archive/synop.{year}{month}.csv.gz"

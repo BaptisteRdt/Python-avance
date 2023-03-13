@@ -8,7 +8,6 @@ from get_donnees import (
     download,
     decompress,
     delete_gzip,
-    execute_data,
 )
 
 
@@ -41,21 +40,20 @@ def test_construct_filename():
 
 def test_download(test_data):
     url, year, month, filename = test_data
-    download(url, year, month)
+    download(url, year, month, filename)
     assert os.path.exists(filename + ".gz")
 
 
 def test_decompress(test_data):
     url, year, month, filename = test_data
-    download(url, year, month)
+    download(url, year, month, filename)
     decompress(filename)
     assert os.path.exists(filename)
-    assert not os.path.exists(filename + ".gz")
 
 
 def test_delete_gzip(test_data):
     url, year, month, filename = test_data
-    download(url, year, month)
+    download(url, year, month, filename)
     decompress(filename)
     delete_gzip(filename)
-    assert not os.path.exists
+    assert not os.path.exists(filename + ".gz")

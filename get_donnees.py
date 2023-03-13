@@ -21,7 +21,7 @@ def construct_filename(year, month):
     return filename
 
 
-def download(url, year, month):
+def download(url, year, month, filename):
     """Downlaod the gzip file"""
     with urllib.request.urlopen(url) as response:
         with open(filename + ".gz", "wb") as outfile:
@@ -46,7 +46,7 @@ def execute_data(url_pattern):
         for month in range(1, 13):
             url = construct_url(year, month, url_pattern)
             filename = construct_filename(year, month)
-            download(url, year, month)
+            download(url, year, month, filename)
             decompress(filename)
             delete_gzip(filename)
 
