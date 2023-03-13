@@ -40,13 +40,12 @@ def delete_gzip(filename):
     os.remove(filename + ".gz")
 
 
-def execute_data(url_pattern):
-    """Construct url & filename, download the gzip file and decompress. Then delete the gzip"""
-    for year in range(1996, date.today().year + 1):
-        for month in range(1, 13):
-            url = construct_url(year, month, url_pattern)
-            filename = construct_filename(year, month)
-            download(url, year, month, filename)
-            decompress(filename)
-            delete_gzip(filename)
-
+# def execute_data(url_pattern):
+#     """Construct url & filename, download the gzip file and decompress. Then delete the gzip"""
+#     for year in range(1996, date.today().year + 1):
+#         for month in range(1, 13):
+#             url = construct_url(year, month, url_pattern)
+#             filename = construct_filename(year, month)
+#             download(url, year, month, filename)
+#             decompress(filename)
+#             delete_gzip(filename)
