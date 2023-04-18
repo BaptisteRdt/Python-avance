@@ -5,10 +5,6 @@ from datetime import date
 import os
 
 
-# Specify the URL pattern
-url_pattern = "https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/Archive/synop.{year}{month}.csv.gz"
-
-
 def construct_url(year, month, url_pattern):
     """Construct the URL for the current year and month"""
     url = url_pattern.format(year=year, month=str(month).zfill(2))
@@ -17,7 +13,9 @@ def construct_url(year, month, url_pattern):
 
 def construct_filename(year, month):
     """Construct the filename for the current year and month"""
-    filename = "synop.{year}{month}.csv".format(year=year, month=str(month).zfill(2))
+    filename = "./data/synop.{year}{month}.csv".format(
+        year=year, month=str(month).zfill(2)
+    )
     return filename
 
 
@@ -39,13 +37,3 @@ def delete_gzip(filename):
     """Delete the gzip file to save disk space """
     os.remove(filename + ".gz")
 
-
-# def execute_data(url_pattern):
-#     """Construct url & filename, download the gzip file and decompress. Then delete the gzip"""
-#     for year in range(1996, date.today().year + 1):
-#         for month in range(1, 13):
-#             url = construct_url(year, month, url_pattern)
-#             filename = construct_filename(year, month)
-#             download(url, year, month, filename)
-#             decompress(filename)
-#             delete_gzip(filename)
