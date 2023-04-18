@@ -9,7 +9,7 @@ Pour lancer notre projet sur votre machine, veuillez le cloner sur votre ordinat
 Après cela il vous faudra un environnement virtuel python à la base de ce projet. Dans le terminal entrez la commande suivante :
 
 ```bash
-python3 -m venv nom_de_l-envrionnement_virtuel
+python -m venv nom_de_l-envrionnement_virtuel
 ```  
 
 Puis, sur Windows, lancez celui-ci avec la commande : 
@@ -31,5 +31,5 @@ pip install -r requirements.txt
 
 Enfin vous pouvez désormais lancer l'application avec la commande : 
 ```bash
-python3 ./application/website/app.py
+python ./application/website/app.py
 ```  
