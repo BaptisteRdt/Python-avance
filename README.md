@@ -1,29 +1,35 @@
 # Python-avancé
 
-## Architecture du projet : 
+## Fonctionnement
 
-```bash 
-Projet python avancé  
- |--Website  
- |     |--picture  
- |     |     |-img1.png  
- |     |     |-img2.png ...  
- |     |--templates   
- |     |     |-index.html ...   
- |     |-app.py  
- |  
- |--App  
- |     |-script.py  
- |  
- |  
- |  
- |  
- |  
- |  
- |--Test  
- |     |--Website  
- |     |     |-test1.py ...  
- |     |--App  
- |           |-test1.py ...  
-```
+### Téléchargement du projet
 
+Pour lancer notre projet sur votre machine, veuillez le cloner sur votre ordinateur puis le lancer sur votre IDE.  
+
+Après cela il vous faudra un environnement virtuel python à la base de ce projet. Dans le terminal entrez la commande suivante :
+
+```bash
+python3 -m venv nom_de_l-envrionnement_virtuel
+```  
+
+Puis, sur Windows, lancez celui-ci avec la commande : 
+
+```bash
+nom_de_l-envrionnement_virtuel/Scripts/Activate.ps1
+```  
+
+### Installation des librairies 
+
+Pour le fonctionnement de l'application, certaines librairies sont nécessaires.
+
+Installez les librairies requises pour le fonctionnement du projet avec la commande :  
+```bash
+pip install -r requirements.txt 
+```  
+
+### Lancement du site web 
+
+Enfin vous pouvez désormais lancer l'application avec la commande : 
+```bash
+python3 ./application/website/app.py
+```  

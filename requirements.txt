@@ -1,3 +1,5 @@
-flask
 pytest
 sqlalchemy
+fastapi
+uvicorn
+jinja2
