@@ -2,7 +2,7 @@ import csv
 import json
 import os
 
-def csv_to_json(input_filename:str, output_filename:str):
+def csv_to_json(path_filename_csv:str, path_filename_json:str):
     """Convert file.csv to file.json
     
     Args:
@@ -13,14 +13,13 @@ def csv_to_json(input_filename:str, output_filename:str):
         No returns
     """
     # Open file.csv and fill python objet row per row
-    with open(input_filename, "r") as csvfile:
+    with open(path_filename_csv, "r") as csvfile:
         csv_reader = csv.DictReader(csvfile)
         data = [row for row in csv_reader]
 
     # Write python objet in json file
-    with open(output_filename, "w") as jsonfile:
+    with open(path_filename_json, "w") as jsonfile:
         json.dump(data, jsonfile)
-
 
 def move_and_transform(name_csv:str, name_json:str):
     """
@@ -34,14 +33,13 @@ def move_and_transform(name_csv:str, name_json:str):
         No returns
     """
     # Path to file.csv
-    input_file = os.path.join(os.getcwd(), "data", name_csv)
+    path_filename_csv = os.path.join(os.getcwd(), "data/csv", name_csv)
 
-    # Path to file.json
-    output_file = os.path.join(os.getcwd(), "data/json", name_json)
+    # Path to file.json 
+    path_filename_json = os.path.join(os.getcwd(), "data/json", name_json)
 
     # Convert file.csv to file.json
-    csv_to_json(input_file, output_file)
-
+    csv_to_json(path_filename_csv, path_filename_json)
 
 def run():
     """
