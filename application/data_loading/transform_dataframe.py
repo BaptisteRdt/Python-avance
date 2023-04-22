@@ -2,6 +2,13 @@ import pandas as pd
 from typing import Set, Any
 
 def openCSVandConcat(df:pd.DataFrame):
+    '''Take all the Data in csv and concatenate them all in one DataFrame
+
+         Args :
+            - df : Object Type DataFrame -> Data
+
+         Return :
+            - df : Object type DataFrame'''
     synop = "synop."
     csv = ".csv"
     meteo_df_list = []
@@ -15,11 +22,26 @@ def openCSVandConcat(df:pd.DataFrame):
     return df
 
 def remove_others(df:pd.DataFrame, columns: Set[Any]):
+    '''Function which removes unnecessary columns from our project
+
+             Args :
+                - df : Object Type DataFrame -> Data
+
+             Return :
+                No returns'''
     cols_total: Set[Any] = set(df.columns)
     diff: Set[Any] = cols_total - columns
     df.drop(diff, axis=1, inplace=True)
 
 def treatment_csv(df:pd.DataFrame):
+    '''Function that performs some processing on the data,
+     deletes columns, renames columns
+
+                 Args :
+                    - df : Object Type DataFrame -> Data
+
+                 Return :
+                    - df : Object Type DataFrame -> Data'''
     df.rename(columns={'t': 'temperature'}, inplace=True)
     remove_others(df, {'numer_sta', 'date', 'temperature', 'ff'})
     df['year'] = df['date'].astype(str).str[:4]
@@ -29,6 +51,14 @@ def treatment_csv(df:pd.DataFrame):
     return df
 
 def convertIntOrFloat(df:pd.DataFrame):
+    '''Function that changes the type of columns
+
+                     Args :
+                        - df : Object Type DataFrame -> Data
+
+                     Return :
+                        - df : Object Type DataFrame -> Data'''
+
     df['temperature'] = df['temperature'].astype(str).str[:6]
     df['temperature'] = pd.to_numeric(df['temperature'], errors='coerce')
     df['ff'] = df['ff'].astype(str).str[:6]

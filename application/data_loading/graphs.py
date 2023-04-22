@@ -2,6 +2,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def dixanneechaudes(df:pd.DataFrame):
+    '''Print a graph of the ten hottest years since 1996
+
+     Args :
+        - df : Object Type DataFrame -> Data since 1996 to 2022
+
+     Return :
+        - MatplotLib Object : Graphic'''
     dfAnnee = df.groupby('year').agg({'temperature': 'mean'})
     dfAnnee.sort_values(by='temperature').head(10)
     dfAnnee.reset_index(inplace=True)
@@ -15,6 +22,14 @@ def dixanneechaudes(df:pd.DataFrame):
     plt.savefig('dix_annees_les_plus_chaudes.png')
 
 def evolutiontemperature(df:pd.DataFrame):
+    '''Print a graph of the evolution of the temperature since 1996
+
+         Args :
+            - df : Object Type DataFrame -> Data since 1996 to 2022
+
+         Return :
+            - MatplotLib Object : Graphic'''
+
     dfAnnee = df.groupby('year').agg({'temperature': 'mean'})
     dfAnnee.sort_values(by='temperature').head(10)
     dfAnnee.reset_index(inplace=True)
@@ -30,6 +45,13 @@ def evolutiontemperature(df:pd.DataFrame):
     plt.savefig('evolution_temperature_dans_le_temps.png')
 
 def nombrejoureolienne(df:pd.DataFrame):
+    '''Print a string on the number of days the wind turbines could not turn since 1996
+
+         Args :
+            - df : Object Type DataFrame -> Data since 1996 to 2022
+
+         Return :
+            - String'''
     j = 0
     for x in df.itertuples():
         if ((x.ff) < 4.1):
