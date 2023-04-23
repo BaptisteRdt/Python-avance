@@ -1,3 +1,4 @@
 {
-  "Tests/test_get_donnees.py": true
+  "Tests/test_get_donnees.py": true,
+  "tests/test_transform_csv_to_json.py::test_move_and_transform": true
 }

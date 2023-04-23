@@ -8,5 +8,7 @@
   "tests/test_get_donnees.py::test_construct_url",
   "tests/test_get_donnees.py::test_decompress",
   "tests/test_get_donnees.py::test_delete_gzip",
-  "tests/test_get_donnees.py::test_download"
+  "tests/test_get_donnees.py::test_download",
+  "tests/test_transform_csv_to_json.py::test_csv_to_json",
+  "tests/test_transform_csv_to_json.py::test_move_and_transform"
 ]

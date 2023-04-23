@@ -13,7 +13,7 @@ def construct_url(year, month, url_pattern):
 
 def construct_filename(year, month):
     """Construct the filename for the current year and month"""
-    filename = "./data/synop.{year}{month}.csv".format(
+    filename = "./data/csv/synop.{year}{month}.csv".format(
         year=year, month=str(month).zfill(2)
     )
     return filename

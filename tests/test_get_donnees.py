@@ -41,7 +41,7 @@ def test_construct_url():
 
 
 def test_construct_filename():
-    assert construct_filename(2022, 1) == "synop.202201.csv"
+    assert construct_filename(2022, 1) == "./data/synop.202201.csv"
 
 
 def test_download(test_data):
