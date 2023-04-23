@@ -2,7 +2,8 @@ import csv
 import json
 import os
 
-def csv_to_json(path_filename_csv:str, path_filename_json:str):
+
+def csv_to_json(path_filename_csv: str, path_filename_json: str):
     """Convert file.csv to file.json
     
     Args:
@@ -21,7 +22,8 @@ def csv_to_json(path_filename_csv:str, path_filename_json:str):
     with open(path_filename_json, "w") as jsonfile:
         json.dump(data, jsonfile)
 
-def move_and_transform(name_csv:str, name_json:str):
+
+def move_and_transform(name_csv: str, name_json: str):
     """
     Find the file.csv path and create a file.json path
     
@@ -35,11 +37,12 @@ def move_and_transform(name_csv:str, name_json:str):
     # Path to file.csv
     path_filename_csv = os.path.join(os.getcwd(), "data/csv", name_csv)
 
-    # Path to file.json 
+    # Path to file.json
     path_filename_json = os.path.join(os.getcwd(), "data/json", name_json)
 
     # Convert file.csv to file.json
     csv_to_json(path_filename_csv, path_filename_json)
+
 
 def run():
     """
@@ -51,7 +54,10 @@ def run():
     Returns:
         No returns
     """
-    for filename in os.listdir("data"):
+    for filename in os.listdir("data/csv"):
         if filename.endswith(".csv"):
             output_filename = os.path.splitext(filename)[0] + ".json"
             move_and_transform(filename, output_filename)
+
+
+run()
