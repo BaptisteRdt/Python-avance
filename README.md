@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Python avancé
+=======
 # Python-avancé
 
 ## Fonctionnement
@@ -36,3 +39,4 @@ python ./application/app.py
 
 Le premier lancement prendra du temps pour télécharger les données depuis 1996 mais ensuite, une fois les que les données
 seront présentes sur votre machine l'application ne téléchargera que le mois dernier et celui en cours. 
+>>>>>>> 7e135d9ab1851500583116ff7b055918b3a24789
