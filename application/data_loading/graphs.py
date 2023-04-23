@@ -59,6 +59,7 @@ def nombre_jour_eolienne(df:pd.DataFrame):
     for x in df.itertuples():
         if x.ff < 4.1:
             no_wind_days = no_wind_days + 1
-        # if x.ff >= 25:
-        #     no_wind_days = no_wind_days + 1
+        if x.ff >= 25:
+            no_wind_days = no_wind_days + 1
+    no_wind_days = no_wind_days/445
     return no_wind_days
