@@ -51,7 +51,7 @@ def run():
     Returns:
         No returns
     """
-    for filename in os.listdir("data"):
+    for filename in os.listdir("data/csv"):
         if filename.endswith(".csv"):
             output_filename = os.path.splitext(filename)[0] + ".json"
             move_and_transform(filename, output_filename)

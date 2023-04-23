@@ -83,7 +83,7 @@ def run(weather_url:str):
     # Create a list with filename.csv 
     list_filenames:list = []
     for filename in os.listdir("data/csv"):
-        list_filenames.append(filename)
+        list_filenames.append(os.path.join("data/csv", filename))
 
     for year in range(1996, date.today().year + 1):
         for month in range(1, 13):

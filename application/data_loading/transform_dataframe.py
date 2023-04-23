@@ -2,13 +2,14 @@ import pandas as pd
 from typing import Set, Any
 
 def openCSVandConcat(df:pd.DataFrame):
+    directory_path = "data/csv/"
     synop = "synop."
     csv = ".csv"
     meteo_df_list = []
     for year in range(1996, 1997):
         for month in range(1, 4):
             month = f'{month:02d}'
-            filename = ''.join(map(str, (synop, year, month, csv)))
+            filename = ''.join(map(str, (directory_path, synop, year, month, csv)))
             meteo = pd.read_csv(filename, sep='\;')
             meteo_df_list.append(meteo)
     df = pd.concat(meteo_df_list)
