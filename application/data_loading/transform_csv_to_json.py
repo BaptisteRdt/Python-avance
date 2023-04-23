@@ -1,6 +1,7 @@
 import csv
 import json
 import os
+from datetime import date
 
 
 def csv_to_json(path_filename_csv: str, path_filename_json: str):
@@ -54,10 +55,14 @@ def run():
     Returns:
         No returns
     """
+    list_files: list = []
+    for filename in os.listdir("data/json"):
+        list_files.append(filename)
+
     for filename in os.listdir("data/csv"):
-        if filename.endswith(".csv"):
-            output_filename = os.path.splitext(filename)[0] + ".json"
+        output_filename = os.path.splitext(filename)[0] + ".json"
+        year = output_filename[6:10]
+        month = output_filename[10:12]
+        
+        if output_filename not in list_files or (date.today().year == year and date.today().month == month):
             move_and_transform(filename, output_filename)
-
-
-run()

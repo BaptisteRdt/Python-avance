@@ -8,13 +8,14 @@
         <li><a href='http://localhost:8000/'>Accueil</a></li>
         <li><a href='http://localhost:8000/les-dix-annees-les-plus-chaudes-depuis-1996'>Les 10 années les plus chaudes</a></li>
         <li><a href='http://localhost:8000/changement-de-temperature-dans-le-temps'>Les changements de température dans le temps</a></li>
-        <li><a href='http://localhost:8000/jour-ou-les-eoliennes-n-ont-pas-tounees'>Les forts changements de température dans une semaine</a></li>
-        <li><a href='http://localhost:8000/fort-changement-de-temperature-dans-une-semaine'>Le nombre de jours sans vent</a></li>
+        <li><a href='http://localhost:8000/fort-changement-de-temperature-dans-une-semaine'>Les forts changements de température dans une semaine</a></li>
+        <li><a href='http://localhost:8000/jour-ou-les-eoliennes-n-ont-pas-tounees'>Le nombre de jour sans vent</a></li>
       </ul>
     </nav>
 
     <h3>Combien de jours sont passés sans vent pour faire tourner les éoliennes ?</h1>
 
-    <h1>Since 1996, there have only been {{ no_wind_day_number }} days when the wind turbines have not work</h1>
+    <h1>Depuis 1996, il y eu {{ no_wind_day_number }} jours sans vent, où les éoliennes n'ont pas tournés</h1>
+    <h1>Cela représente {{ no_wind_month_number }} mois ou {{ no_wind_year_number }} années</h1>
   </body>
 </html>

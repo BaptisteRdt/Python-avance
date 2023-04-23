@@ -7,12 +7,12 @@ import data_loading.transform_dataframe as transform_df
 import data_loading.graphs as graphs
 import pandas as pd
 
-# # Get weather data
-# weather_url:str = "https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/Archive/synop.{year}{month}.csv.gz"
-# dl_data.run(weather_url)
+# Get weather data
+weather_url:str = "https://donneespubliques.meteofrance.fr/donnees_libres/Txt/Synop/Archive/synop.{year}{month}.csv.gz"
+dl_data.run(weather_url)
 
-# # Transform csv files to json files
-# to_json.run()
+# Transform csv files to json files
+to_json.run()
 
 # Transforme dataframe
 df = pd.DataFrame()

@@ -3,7 +3,7 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
 def configuration_route(app: FastAPI, no_wind_day_number: int):
-    templates = Jinja2Templates(directory="website/templates")
+    templates = Jinja2Templates(directory="application/website/templates")
 
     @app.get('/')
     def index(request: Request):
@@ -19,7 +19,9 @@ def configuration_route(app: FastAPI, no_wind_day_number: int):
 
     @app.get('/jour-ou-les-eoliennes-n-ont-pas-tounees', response_class=HTMLResponse)
     def jour_de_vent(request: Request):
-        return templates.TemplateResponse("jour_de_vent.html", {"request": request}, no_wind_day_number=no_wind_day_number)
+        return templates.TemplateResponse("jour_de_vent.html", {"request": request, "no_wind_day_number":no_wind_day_number, 
+                                                                "no_wind_month_number": no_wind_day_number/30,
+                                                                "no_wind_year_number": no_wind_day_number/365.25})
 
     @app.get('/fort-changement-de-temperature-dans-une-semaine', response_class=HTMLResponse)
     def fort_changement_dans_semaine(request: Request):

@@ -91,22 +91,17 @@ def run(weather_url: str):
     # Create a list with full file paths
     list_files: list = []
     for filename in os.listdir("data/csv"):
-        list_files.append(os.path.join("data/csv", filename))
-
+        list_files.append(os.path.join("./data/csv/", filename))
+        
     for year in range(1996, date.today().year + 1):
-        for month in range(1, 13):
+        months = 13
+        if year == date.today().year:
+            months = date.today().month + 1
+        for month in range(1, months):
             filename: str = construct_filename(year, month)
             # If the file is already present, we skip the download
-            if filename in list_files:
-                continue
-            url: str = construct_url(year, month, weather_url)
-
-            # If it's the current month, we skip the download
-            if date.today().year == year and date.today().month == month:
-                continue
-            download(url, filename)
-            decompress(filename)
-            delete_gzip(filename)
-
-
-run(weather_url)
+            if filename not in list_files or (date.today().year == year and date.today().month == month):
+                url: str = construct_url(year, month, weather_url)
+                download(url, filename)
+                decompress(filename)
+                delete_gzip(filename)
