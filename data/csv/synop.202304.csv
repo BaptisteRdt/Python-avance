@@ -10913,6 +10913,7 @@ numer_sta;date;pmer;tend;cod_tend;dd;ff;t;td;u;vv;ww;w1;w2;n;nbas;hbas;cl;cm;ch;
 81408;20230423120000;101130;180;1;180;0.500000;299.250000;296.950000;87;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;101050;mq;mq;70;mq;296.050000;mq;300.750000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;0.000000;2.200000;2.200000;2.200000;34.500000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;
 81415;20230423120000;mq;mq;mq;100;1.000000;299.050000;296.950000;88;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;296.250000;mq;301.550000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;0.000000;0.000000;0.000000;0.400000;26.700000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;
 89642;20230423120000;99300;-150;6;70;1.000000;255.350000;248.450000;51;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;98730;mq;mq;mq;254.150000;mq;257.450000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;
+<<<<<<< HEAD
 07005;20230423150000;100010;40;3;270;8.600000;282.150000;281.350000;95;11300;61;mq;mq;mq;mq;mq;mq;mq;mq;99150;mq;mq;-710;mq;mq;mq;mq;280.150000;mq;mq;12.200000;17.900000;-10;1;0.000000;mq;mq;5.400000;12.100000;12.100000;13.100000;13.100000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;
 07015;20230423150000;99780;-410;8;130;7.800000;285.650000;283.750000;88;34170;0;mq;mq;100;8;450;mq;mq;mq;99220;mq;mq;-990;mq;mq;mq;mq;280.250000;mq;mq;12.200000;13.600000;-10;2;0.000000;mq;mq;0.400000;0.400000;1.000000;1.000000;1.000000;mq;mq;mq;mq;7;mq;480;8;mq;690;mq;mq;mq;mq;mq;mq;
 07020;20230423150000;100340;100;1;270;6.500000;284.550000;281.250000;80;10000;1;2;mq;75;5;800;34;26;10;100230;mq;mq;-160;mq;mq;mq;mq;mq;mq;mq;10.000000;10.800000;-10;mq;mq;mq;mq;0.000000;0.000000;-0.100000;11.300000;12.500000;mq;mq;mq;mq;5;6;800;3;3;2100;mq;mq;mq;mq;mq;mq;
@@ -10974,3 +10975,5 @@ numer_sta;date;pmer;tend;cod_tend;dd;ff;t;td;u;vv;ww;w1;w2;n;nbas;hbas;cl;cm;ch;
 81408;20230423150000;101080;50;8;180;1.400000;303.450000;297.150000;69;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;101000;mq;mq;50;mq;296.050000;mq;303.750000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;0.000000;0.000000;2.200000;2.200000;29.700000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;
 81415;20230423150000;mq;mq;mq;60;1.100000;302.650000;296.550000;70;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;296.250000;mq;303.750000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;0.000000;0.000000;0.000000;0.400000;16.700000;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;
 89642;20230423150000;99110;-190;8;130;9.800000;254.750000;248.550000;55;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;98540;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;18.500000;18.500000;-30;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;mq;
+=======
+>>>>>>> 50531d1d4518f609869e62e24bb3ce765c9b0812
