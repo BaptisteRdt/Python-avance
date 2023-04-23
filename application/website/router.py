@@ -1,8 +1,20 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+from fastapi.staticfiles import StaticFiles
+from os.path import realpath
 
 def configuration_route(app: FastAPI, no_wind_day_number: int):
+    app.mount(
+        "/static",
+        StaticFiles(directory=realpath(f"{realpath(__file__)}/../static")),
+        name="static",
+    )
+    app.mount(
+        "/graphs",
+        StaticFiles(directory=realpath(f"{realpath(__file__)}/../graphs")),
+        name="graphs",
+    )
     templates = Jinja2Templates(directory="application/website/templates")
 
     @app.get('/')

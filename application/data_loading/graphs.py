@@ -20,7 +20,7 @@ def dix_annee_chaudes(df:pd.DataFrame):
     plt.bar(dfAnnee["year"],
             dfAnnee["temperature"],
             color='blue')
-    plt.savefig('data/graphs/dix_annees_les_plus_chaudes.png')
+    plt.savefig('application/website/graphs/dix_annees_les_plus_chaudes.jpg')
 
 def evolution_temperature(df:pd.DataFrame):
     '''
@@ -43,7 +43,7 @@ def evolution_temperature(df:pd.DataFrame):
     plt.xlabel('Années')
     plt.ylabel('Température')
     plt.plot(x, y, linewidth=4)
-    plt.savefig('data/graphs/evolution_temperature_dans_le_temps.png')
+    plt.savefig('application/website/graphs/evolution_temperature_dans_le_temps.jpg')
 
 def nombre_jour_eolienne(df:pd.DataFrame):
     '''
